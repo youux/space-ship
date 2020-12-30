@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Press Start 2P', sans-serif;
+  overflow: hidden;
+  color: #fff;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+button,
+.key {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+canvas {
+  display: block;
+}
+h1 {
+  font-size: 48px;
+}
+ul {
+  margin: 20px 0;
+  list-style: none;
+}
+li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #ff9d00;
+}
+button:focus,
+button:hover {
+  transition-duration: .07s;
+  color: #ff9d00;
+  background-color: black;
+}
+.dialogue {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(0);
+  text-align: center;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, .85);
+}
+.dialogue--hidden {
+  transition: opacity .3s linear 0s, transform 0s linear .3s;
+  transform: translateX(-100vw);
+  opacity: 0;
+}
+.dialogue--content {
+  padding: 18px;
+  text-align: center;
+}
+.key {
+  margin: 0 10px;
+  color: #fff;
+  border-color: #fff;
+}
+.score {
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  transition: opacity .07s linear .5s;
+  opacity: 1;
+  color: #ff9d00;
+}
+.score--hidden {
+  opacity: 0;
+}
